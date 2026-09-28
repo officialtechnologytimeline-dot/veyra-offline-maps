@@ -1,11 +1,11 @@
 {
   "catalogVersion": 3,
-  "generatedAt": "2026-09-28T10:39:55.764Z",
+  "generatedAt": "2026-09-28T11:54:24.078Z",
   "countries": [
     {
       "id": "mc",
       "iso2": "MC",
-      "revision": "2026.09.26",
+      "revision": "2026.09.27-b1",
       "names": {
         "en": "Monaco",
         "it": "Monaco",
@@ -13,9 +13,9 @@
         "de": "Monaco",
         "es": "Mónaco"
       },
-      "dataTimestamp": "2026-09-26T20:22:51Z",
-      "releasedAt": "2026-09-28T00:00:00Z",
-      "totalBytes": 4176074,
+      "dataTimestamp": "2026-09-27T20:23:36Z",
+      "releasedAt": "2026-09-28T11:54:16.864Z",
+      "totalBytes": 4176045,
       "bounds": [
         7.39,
         43.3,
@@ -43,18 +43,18 @@
       "compatibleStyleIds": [
         "protomaps-basemap-v4-veyra-dark"
       ],
-      "source": "OpenStreetMap · Geofabrik Monaco 2026-09-26 · Protomaps 2026-09-27",
+      "source": "OpenStreetMap · Geofabrik 2026-09-27 · Protomaps 20260927",
       "provenance": {
         "datasetId": "geofabrik-monaco",
         "datasetName": "Geofabrik OpenStreetMap Monaco extract",
         "datasetUrl": "https://download.geofabrik.de/europe/monaco.html",
-        "sourceArchiveUrl": "https://download.geofabrik.de/europe/monaco-260926.osm.pbf",
+        "sourceArchiveUrl": "https://download.geofabrik.de/europe/monaco-260927.osm.pbf",
         "publisherId": "technology-timeline",
         "publisherName": "Technology Timeline",
         "publisherUrl": "https://github.com/officialtechnologytimeline-dot/veyra-offline-maps",
         "distributionOrigin": "https://github.com",
         "buildPipelineId": "veyra-country-pack",
-        "buildPipelineVersion": "1.0.0",
+        "buildPipelineVersion": "1.1.0",
         "rightsNoticeUrl": "https://github.com/officialtechnologytimeline-dot/veyra-offline-maps/blob/main/ATTRIBUTION.md"
       },
       "attribution": {
@@ -68,41 +68,41 @@
           "role": "basemap",
           "format": "pmtiles",
           "formatVersion": 3,
-          "fileName": "mc-2026.09.26-complete.pmtiles",
+          "fileName": "mc-2026.09.27-b1.pmtiles",
           "bytes": 2634991,
           "sha256": "a35b829ed2fd9ce3fe253489a95072f47134e6323b0c02a03bff7b1d70be3016",
-          "url": "https://github.com/officialtechnologytimeline-dot/veyra-offline-maps/releases/download/mc-2026.09.26/mc-2026.09.26-complete.pmtiles"
+          "url": "https://github.com/officialtechnologytimeline-dot/veyra-offline-maps/releases/download/mc-2026.09.27-b1/mc-2026.09.27-b1.pmtiles"
         },
         {
           "id": "mc-routing",
           "role": "routing",
           "format": "vgraph",
           "formatVersion": 2,
-          "fileName": "mc-2026.09.26.vgraph",
-          "bytes": 611592,
-          "sha256": "3f747d8b72476947ec5c6bf4f0cfb66595d4b5e85069c674e6f56e45e4440722",
-          "url": "https://github.com/officialtechnologytimeline-dot/veyra-offline-maps/releases/download/mc-2026.09.26/mc-2026.09.26.vgraph"
+          "fileName": "mc-2026.09.27-b1.vgraph",
+          "bytes": 611584,
+          "sha256": "7d248266a6ce30c5cfedd16d6f789d4c70ee67c006c065f772b87fa57c6cd118",
+          "url": "https://github.com/officialtechnologytimeline-dot/veyra-offline-maps/releases/download/mc-2026.09.27-b1/mc-2026.09.27-b1.vgraph"
         },
         {
           "id": "mc-search",
           "role": "search",
           "format": "vsearch",
           "formatVersion": 2,
-          "fileName": "mc-2026.09.26.vsearch",
-          "bytes": 209400,
-          "sha256": "af15a3376ec51ef7b236dd86ee86e4919eb3ad0a18c0f5f13d7e25ca042a6536",
-          "url": "https://github.com/officialtechnologytimeline-dot/veyra-offline-maps/releases/download/mc-2026.09.26/mc-2026.09.26.vsearch"
+          "fileName": "mc-2026.09.27-b1.vsearch",
+          "bytes": 209390,
+          "sha256": "1fdd01e3d71fe896b2849e5b7d59fc923edb99488408e55a2e0fab4eda4b0df7",
+          "url": "https://github.com/officialtechnologytimeline-dot/veyra-offline-maps/releases/download/mc-2026.09.27-b1/mc-2026.09.27-b1.vsearch"
         },
         {
           "id": "mc-road-identity",
           "role": "road-identity",
           "format": "vrid",
           "formatVersion": 1,
-          "fileName": "mc-2026.09.26.vrid",
-          "bytes": 720091,
-          "sha256": "8021eee7d6e1df978744611d8292e97b7b18e89ca1daecf13a40c0be7d44a0f6",
-          "directorySha256": "2b4e814f0e3bb80ec69b2a107587a820e5cad4e1e6b0c1ff46907bb38c9b1314",
-          "url": "https://github.com/officialtechnologytimeline-dot/veyra-offline-maps/releases/download/mc-2026.09.26/mc-2026.09.26.vrid"
+          "fileName": "mc-2026.09.27-b1.vrid",
+          "bytes": 720080,
+          "sha256": "ce57793b9566c2fc2f786c8da26e7a6375d5ad37f0aca15dee34dd051041c686",
+          "url": "https://github.com/officialtechnologytimeline-dot/veyra-offline-maps/releases/download/mc-2026.09.27-b1/mc-2026.09.27-b1.vrid",
+          "directorySha256": "1cd7e2c2ec946e26f945a1cf080c64602bd602795bb283a9c170682959d9b1f5"
         }
       ]
     }
