@@ -64,6 +64,9 @@ export async function buildCountry(profile, previous, work, builds) {
   const dataTimestamp = source.osm3s.timestamp_osm_base;
   if (!Number.isFinite(Date.parse(dataTimestamp)) || Date.parse(dataTimestamp) > Date.now() ||
       Date.parse(dataTimestamp) < Date.parse(previous.dataTimestamp)) throw new Error('Invalid/stale source timestamp');
+  const datedSourceUrl = profile.source.replace('-latest.osm.pbf', `-${dataTimestamp.slice(2, 10).replaceAll('-', '')}.osm.pbf`);
+  const datedHash = await download(datedSourceUrl, path.join(sourceDir, 'dated.osm.pbf'), profile.maxPbfBytes);
+  if (datedHash.sha256 !== sourceHash.sha256) throw new Error('Dated upstream archive does not match captured source');
   const build = builds.filter((b) => /^\d{8}\.pmtiles$/.test(b.key) && b.version === previous.mapSchema.version)
     .sort((a, b) => b.key.localeCompare(a.key))[0];
   if (!build || Date.now() - Date.parse(build.uploaded) > 10 * 86_400_000) throw new Error('No recent compatible basemap; keeping installed release');
@@ -73,7 +76,7 @@ export async function buildCountry(profile, previous, work, builds) {
   const output = path.join(work, tag); await fs.mkdir(output);
   const country = { ...previous, revision, dataTimestamp, releasedAt: new Date().toISOString(),
     source: `OpenStreetMap · Geofabrik ${dataTimestamp.slice(0, 10)} · Protomaps ${build.key.slice(0, 8)}`,
-    provenance: { ...previous.provenance, sourceArchiveUrl: `${releaseUrl}/${profile.id}.osm.pbf`, buildPipelineVersion: '1.1.0' } };
+    provenance: { ...previous.provenance, sourceArchiveUrl: datedSourceUrl, buildPipelineVersion: '1.1.0' } };
   const graphPath = path.join(work, `${profile.id}.graph.json`);
   node('build-routing-graph.mjs', ['--input', sourceJson, '--output', graphPath, '--id', `${profile.id}-routing`, '--revision', revision]);
   const graph = await json(graphPath);
